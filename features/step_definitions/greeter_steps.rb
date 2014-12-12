@@ -1,9 +1,9 @@
-Given(/^a animal$/) do
+Given(/^an animal$/) do
   @animal = Animal.new('Lucy', 'cat', 4)
 end
 
 When(/^older than (\d+)$/) do |arg1|
-  expect(@animal.old?).to be true 
+  expect(@animal.old?).to be true
 end
 
 When(/^I verify it is a "(.*?)"$/) do |type|
