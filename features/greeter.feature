@@ -8,3 +8,4 @@ Feature: Greeter
     When older than 3
     And I verify it is a "cat"
     Then I should see "Mr Cat"
+
