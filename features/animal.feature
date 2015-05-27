@@ -5,17 +5,17 @@ Feature: Animal
 
   Scenario: Animal named Gorbypuff
     Given a cat
-    When I have a name
+    When I am named Gorbypuff
     Then I should be called "Gorbypuff"
 
   Scenario: Animal of type Roosevelt Elk
     Given an elk
-    When I have a type
+    When I am of type Roosevelt Elk
     Then I should be recognized as a Roosevelt Elk
 
   Scenario: Animal of age 7
     Given a dog
-    When I have an age
+    When I am of age 7
     Then I should be of age 7
 
   Scenario: Elderly animal
