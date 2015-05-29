@@ -1,4 +1,4 @@
-Given(/^a animal$/) do
+Given(/^an animal$/) do
   @animal = Animal.new('Lucy', 'cat', 4)
 end
 

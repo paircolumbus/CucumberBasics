@@ -1,4 +1,3 @@
-# The sample feature 'greeter.feature' is testing this.
 # Your challenge is to test 'animal.rb' NOT this file :)
 
 class Greeter
