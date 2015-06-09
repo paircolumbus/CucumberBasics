@@ -32,3 +32,6 @@ DEPENDENCIES
   cucumber
   pry
   rspec-expectations
+
+BUNDLED WITH
+   1.10.3
