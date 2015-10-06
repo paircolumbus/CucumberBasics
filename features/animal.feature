@@ -15,3 +15,15 @@ Feature: Animal
     When I ask about its "age"
     Then I should get its "age"
 
+  Scenario: Old Animal
+    Given an animal "older than" 3 years
+    When I ask if it is old
+    Then I should get "yes"
+
+  Scenario: Young Animal
+    Given an animal "younger than" 3 years
+    When I ask if it is old
+    Then I should get "no"
+    Given an animal "exactly" 3 years
+    When I ask if it is old
+    Then I should get "no"
