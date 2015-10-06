@@ -22,9 +22,9 @@ Then(/the animal's age should be (\d+)/) do |age|
 end
 
 Then(/the animal should be old/) do
-  expect(@animal.old?).to be true
+  expect(@animal).to be_old
 end
 
 Then(/the animal should not be old/) do
-  expect(@animal.old?).to be false
+  expect(@animal).not_to be_old
 end
