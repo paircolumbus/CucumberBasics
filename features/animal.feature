@@ -28,3 +28,7 @@ Feature: Animal
     Given I'm a 2 years old animal
     When younger or equeal to 3
     Then should not be old
+
+    Given I'm a 3 years old animal
+    When younger or equeal to 3
+    Then should not be old
