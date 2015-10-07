@@ -6,24 +6,25 @@ Feature: Animal
   I want to say I'm old
 
 
-  Scenario: Animal
-    Given an animal
-    When I ask about its "name"
-    Then I should get its "name"
-    When I ask about its "type"
-    Then I should get its "type"
-    When I ask about its "age"
-    Then I should get its "age"
+  Scenario: Get the animal information
 
-  Scenario: Old Animal
-    Given an animal "older than" 3 years
-    When I ask if it is old
-    Then I should get "yes"
+    Given I'm a 3 year old cat named 'felix'
 
-  Scenario: Young Animal
-    Given an animal "younger than" 3 years
-    When I ask if it is old
-    Then I should get "no"
-    Given an animal "exactly" 3 years
-    When I ask if it is old
-    Then I should get "no"
+    When ask about my "name"
+    Then should get the value "felix"
+
+    When ask about my "type"
+    Then should get the value "cat"
+
+    When ask about my "age"
+    Then should get the value "3"
+
+  Scenario: Say if the animal is old
+
+    Given I'm a 4 years old animal
+    When older than 3
+    Then should be old
+
+    Given I'm a 2 years old animal
+    When younger or equeal to 3
+    Then should not be old

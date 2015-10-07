@@ -1,29 +1,29 @@
-Given(/^an animal$/) do
-  @name = "Any"
-  @type = "animal"
-  @age = 4
-  @attributes = {'name' => @name, 'type' => @type, 'age' => @age}
-  @animal = Animal.new(@name, @type, @age)
+Given /I'm a (\d+) year old (.*) named '(.*)'/ do |age, type, name|
+  @animal = Animal.new(name, type, age)
 end
 
-When(/^I ask about its "(.*?)"$/) do |attr|
-  expect(@attributes.include?(attr)).to be true
-  @current_attribute = @animal.send(attr)
+When /ask about my "(.*)"/ do |attribute|
+  expect(@animal.instance_variable_defined?("@#{attribute}")).to be true
+  @attribute_value = @animal.public_send(attribute)
 end
 
-Then(/^I should get its "(.*?)"$/) do |attr|
-  expect(@current_attribute).to eq @attributes[attr]
+Then /should get the value "(.*)"/ do |value|
+  expect(value).to eq(@attribute_value)
 end
 
-Given(/^an animal "(older than|younger than|exactly)" 3 years$/) do |old|
-  @test_age = {"older than" => 4, "younger than" => 2, "exactly" => 3}
-  @animal = Animal.new("Any", "animal", @test_age[old])
+Given /I'm a (\d+) years old animal/ do |years|
+  @animal = Animal.new("animal", "any", years.to_i)
 end
 
-When(/^I ask if it is old$/) do
-  @old = @animal.send("old?")
+When /younger or equeal to (\d+)/ do |years|
+  expect(@animal.age).to be <= years.to_i
 end
 
-Then (/^I should get "(yes|no)"$/) do |old|
-  expect(@old).to be (old == "yes")
+
+Then /should be old/ do
+  expect(@animal).to be_old
+end
+
+Then /should not be old/ do
+  expect(@animal).not_to be_old
 end
