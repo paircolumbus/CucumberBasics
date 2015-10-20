@@ -3,7 +3,7 @@ Given(/^a (\d+) year old (.*?) named (.*?)$/) do |age, type, name|
 end
 
 When(/^asked my (.*?)$/) do |attribute|
-  @value = @animal.send(attribute)
+  @value = @animal.public_send(attribute)
 end
 
 Then(/^the result should be (.*?)$/) do |value|
@@ -19,7 +19,7 @@ When(/^animal older than (\d+)$/) do |limit|
 end
 
 Then(/^the animal is old$/) do
-  expect(@animal.old?)
+  expect(@animal).to be_old
 end
 
 When(/^animal younger than (\d+)$/) do |limit|
@@ -27,5 +27,5 @@ When(/^animal younger than (\d+)$/) do |limit|
 end
 
 Then(/^the animal is not old$/) do
-  expect(!@animal.old?)
+  expect(@animal).not_to be_old
 end

@@ -12,8 +12,8 @@ Feature: Animal
 
   Scenario: Is animal old
     Given a 15 year old animal
-    When animal older than 10
+    When animal older than 3
     Then the animal is old
-    Given a 7 year old animal
-    When animal younger than 10
+    Given a 2 year old animal
+    When animal younger than 3
     Then the animal is not old
