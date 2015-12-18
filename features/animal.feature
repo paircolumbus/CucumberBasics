@@ -17,4 +17,3 @@ Feature: Clientele Tracker
    Given Oscar, a 2-year old green sea turtle
    When we track him
    Then he should not be old
-
