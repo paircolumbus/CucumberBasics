@@ -6,7 +6,7 @@ class Animal
   def initialize(name, type, age)
     @name = name
     @type = type
-    @age = age
+    @age = age.to_i
   end
 
   def old?
