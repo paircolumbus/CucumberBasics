@@ -1,1 +1,6 @@
-#Create your feature here
+Feature: Animal
+	In order to 
+
+
+	Scenario: Lion
+		Given a animal
