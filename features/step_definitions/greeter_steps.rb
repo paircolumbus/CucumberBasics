@@ -3,7 +3,7 @@ Given(/^a animal$/) do
 end
 
 When(/^older than (\d+)$/) do |arg1|
-  expect(@animal.old?).to be true 
+  expect(@animal.old?).to be true
 end
 
 When(/^I verify it is a "(.*?)"$/) do |type|
