@@ -1,20 +1,11 @@
 Feature: Animal
-  In order to identify each animal,
-  I want to know the name, type, age, and old.
+  In order to identify each animal
+  As a hotel owner
+  I want to know its name, type, age, and if it is old.
 
-Scenario: name
-  Given an animal
-  Then it has a "name"
-
-Scenario: type
-  Given an animal
-  Then it has a "type"
-
-Scenario: age
-  Given an animal
-  Then it has an "age"
-
-Scenario: old
-  Given an animal
-  When age is more than 3
-  Then it should be old
+  Scenario: details
+    Given an animal
+    When its name is "Ein"
+    And its type is "dog"
+    And its age is 5
+    Then it should be "old"
