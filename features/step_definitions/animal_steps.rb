@@ -3,11 +3,11 @@ Transform (/^(-?\d+)$/) do |number|
 end
 
 Given(/^an animal$/) do
-	@animal = Animal.new('Bob', 'Cat', 2)
+  @animal = Animal.new('Bob', 'Cat', 2)
 end
 
 When(/^the animal is a (.*?)$/) do |type|
-	expect(@animal.type).to eq type
+  expect(@animal.type).to eq type
 end
 
 When(/^the anmial is named "(.*?)"$/) do |arg1|
@@ -19,7 +19,7 @@ When (/^the animal is (\d+) years old$/) do |age|
 end
 
 Then (/^the type should be "(.*?)"$/) do |type|
-	expect(@animal.type).to eq type
+  expect(@animal.type).to eq type
 end
 
 Then(/^the name should be "(.*?)"$/) do |name|
