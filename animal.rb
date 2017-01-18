@@ -12,4 +12,18 @@ class Animal
   def old?
     age > 3
   end
+
+  def respond
+    if @type == "cat"
+      "Meow!"
+    elsif @type == "dog"
+      "Woof!"
+    elsif @type == "cow"
+      "Moo!"
+    elsif @type == "fox"
+      "Yip!"
+    else
+      "Me Tarzan!"
+    end
+  end
 end
