@@ -1,19 +1,32 @@
 Given (/^a "(.*?)"$/) do |type|
-  @animal=Animal.new('Fluffington', type, 5)
+  @animal=Animal.new('Spot', type, 5)
 end
 
-When (/^it is confirmed a "(.*?)"$/) do |type|
-  expect(@animal.type == type)
+Given (/^a "(.*?)" named "(.*?)" that is (\d+) years old$/) do |type, name, age|
+  @animal=Animal.new(name, type, age)
 end
 
-When(/^older than (\d+) years old$/) do |age_limit|
-  expect(@animal.age > age_limit.to_i).to be true
+#old check
+Then (/^they are old$/) do
+  expect(@animal.old?).to eq true
 end
 
-Then (/^it is confirmed old$/) do
-  expect(@animal.old?).to be true
-end
-
+#animal response check
 Then(/^the "(.*?)" responds with "(.*?)"$/) do |type, response|
   expect(@animal.respond).to eq response
+end
+
+#name check
+Then(/^they will respond to "(.*?)"/) do |name|
+  expect(@animal.name).to eq name
+end
+
+#age check
+Then(/^they are (\d+) years old/) do |age|
+  expect(@animal.age).to eq age
+end
+
+#type check
+Then (/^it is confirmed a "(.*?)"$/) do |type|
+  expect(@animal.type == type)
 end

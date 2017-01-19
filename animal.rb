@@ -10,7 +10,7 @@ class Animal
   end
 
   def old?
-    age > 3
+    age.to_i > 3
   end
 
   def respond
