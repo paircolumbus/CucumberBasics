@@ -4,6 +4,6 @@ Feature: Room Service
   I want to be fed fish
   
   Scenario: Cat
-    Given a animal
-    When I verify it is a "cat"
-    Then I should give it fish
+    Given an animal
+    When I verify she is a "cat"
+    Then I should give her salmon
