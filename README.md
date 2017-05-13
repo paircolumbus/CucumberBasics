@@ -1,4 +1,4 @@
-#Cucumber Basics
+# Cucumber Basics
 
 __Skill Level:__ Beginner  
 __Time Limit:__ 30 minutes
@@ -10,7 +10,7 @@ Write a feature test in Gherkin and implement `steps_definitions` that best matc
 - The hotel manager wants the script to keep track of the name, type and age of every animal
 - Test the `Animal` object and ensure that it has the right output for its reader methods `name, type, age, old?`
 
-##Instructions
+## Instructions
 - Checkout the sample feature & steps defs named `greeter.feature` & `greeter_steps.rb`
 - `clone` your repo on to your computer
 - `cd` into your directory
@@ -18,7 +18,7 @@ Write a feature test in Gherkin and implement `steps_definitions` that best matc
 - navigate to `features/animal.feature` and write your feature
 - navigate to `features/step_definitions/animal_steps.rb` and write your step defs
 
-##Resources
+## Resources
 - [http://cukes.info/](http://cukes.info/)
 - [Cuke Docs: Step Definitions](https://cucumber.io/docs/reference#step-definitions)
 - [RSpec Matchers](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers)
