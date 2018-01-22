@@ -10,6 +10,6 @@ class Animal
   end
 
   def old?
-    age > 3
+    @age > 3
   end
 end
