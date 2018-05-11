@@ -1,15 +1,15 @@
 Given(/^an animal that is four years old$/) do
-  pending # express the regexp above with the code you wish you had
+  @animal = Animal.new('Gidget', 'cat', 4)
 end
 
 Then(/^it is named 'Gidget'$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(@animal.name).to eq 'Gidget'
 end
 
 Then(/^it has a type of 'cat'$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(@animal.type).to eq 'cat'
 end
 
 Then(/^it is considered old$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(@animal.old?).to be true
 end
