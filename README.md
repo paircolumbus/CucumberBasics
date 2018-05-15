@@ -11,12 +11,12 @@ Write a feature test in Gherkin and implement `steps_definitions` that best matc
 - Test the `Animal` object and ensure that it has the right output for its reader methods `name, type, age, old?`
 
 ## Instructions
-- Checkout the sample feature & steps defs named `greeter.feature` & `greeter_steps.rb`
-- `clone` your repo on to your computer
-- `cd` into your directory
-- `bundle` to pull in this project's dependencies
-- navigate to `features/animal.feature` and write your feature
-- navigate to `features/step_definitions/animal_steps.rb` and write your step defs
+1. Checkout the sample feature & steps defs named `greeter.feature` & `greeter_steps.rb`
+2. `clone` your repo on to your computer
+3. `cd` into your directory
+4. `bundle` to pull in this project's dependencies
+5. navigate to `features/animal.feature` and write your feature
+6. navigate to `features/step_definitions/animal_steps.rb` and write your step defs
 
 ## Resources
 - [http://cukes.info/](http://cukes.info/)
