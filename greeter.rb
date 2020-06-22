@@ -14,7 +14,7 @@ class Greeter
   end
 
   def greet
-    if cat?
+    if cat? && animal.age > 3
       "Mr Cat"
     else
       "We don't know how to greet #{animal.name}"
